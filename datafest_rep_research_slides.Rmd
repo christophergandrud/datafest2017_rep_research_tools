@@ -8,8 +8,17 @@ output:
         logo: img/iqss_logo_flat.png
 ---
 
-## Why reproducible research?
+## Is this research?
 
+![](img/journal_ss.png)
+
+## Is this research?
+
+![](img/cox.png)
+
+## No
+
+> Papers, articles, slideshows, talks, books are **advertising, not research**.
 
 
 ## Skills checklist
@@ -23,3 +32,8 @@ output:
 - Insert **R code chunks** into R Markdown documents that gathers data and outputs results
 
 - Understand key **code chunk option** syntax
+
+
+## Quants and computer programming
+
+> The practice of quantitative science is computer programming.
