@@ -1,0 +1,25 @@
+---
+title: "DataFest 2017—Reproducible Research Tools"
+author: "Christopher Gandrud -- IQSS"
+date: "17 Jan. 2017"
+output: 
+    ioslides_presentation:
+        css: datafest_slides.css
+        logo: img/iqss_logo_flat.png
+---
+
+## Why reproducible research?
+
+
+
+## Skills checklist
+
+- Reproducible research **workflow** with **literate programming**
+
+- Create a new **R Markdown** document that outputs to PDF and HTML
+
+- **Markdown** and **YAML** syntax
+
+- Insert **R code chunks** into R Markdown documents that gathers data and outputs results
+
+- Understand key **code chunk option** syntax
