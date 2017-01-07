@@ -55,7 +55,11 @@ This includes “the **full software environment**, code, and data that produced
 
 ## Following along
 
-In this workshop we will create a fake research project using the literate programming tool R Markdown. 
+In this workshop we will create a fake research project using the literate programming tool R Markdown.
+
+<br>
+
+A completed version of the project can be found at: 
 
 ## What you need
 
@@ -78,6 +82,12 @@ In this workshop we will create a fake research project using the literate progr
 
 
 # Setup R Markdown
+
+## Create a new R Markdown file {.build}
+
+In RStudio: `File` > `New File` > `R Markdown...`
+
+![](img/new_rmarkdown.png)
 
 
 # Markdown and YAML Syntax
