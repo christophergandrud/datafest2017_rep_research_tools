@@ -1,7 +1,7 @@
 ---
 title: "DataFest 2017—Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
-date: "17 Jan. 2017"
+date: "17 January 2017"
 output: 
     ioslides_presentation:
         css: datafest_slides.css
@@ -24,27 +24,72 @@ bibliography: datafest_rep.bib
 ## What are journal articles/books/etc?
 
 > **Presentation documents**: announce select findings and try to convince an 
-audience that they are correct @Mesirov2010.
+audience that they are correct [@Mesirov2010].
 
+## What is research?
+
+Quantitative research involves the **procedures** and **choices** researchers make to **gather** data, **process** it, and **analysis** it in order to address their research questions.
+
+<br>
+<br>
+
+This includes “the **full software environment**, code, and data that produced the results” [@Donoho2010, 3015].
+
+## Quants and computer programming
+
+> The practice of quantitative science **is computer programming**.
+
+# Plan
 
 ## Skills checklist
 
 - Reproducible research **workflow** with **literate programming**
 
-- Create a new **R Markdown** document that outputs to PDF and HTML
+> - Create a new **R Markdown** document that outputs to PDF and HTML
 
-- **Markdown** and **YAML** syntax
+> - **Markdown** and **YAML** syntax
 
-- Insert **R code chunks** into R Markdown documents that gathers data and outputs results
+> - **R code chunks** into R Markdown documents that gathers data and outputs results
 
-- Understand key **code chunk option** syntax
+> - **Pandoc** citations
 
-- **Pandoc** citations
+## Following along
+
+In this workshop we will create a fake research project using the literate programming tool R Markdown. 
+
+## What you need
+
+- Installed:
+
+    + R and RStudio
+    
+    + `rmarkdown` package for R
+
+    + GitHub Desktop/GitHub account
+
+    + LaTeX (if you want to output to PDFs)
+
+- Working internet connection
+
+# Reproducible Workflow 
 
 
-## Quants and computer programming
+# Literate Programming
 
-> The practice of quantitative science is computer programming.
+
+# Setup R Markdown
+
+
+# Markdown and YAML Syntax
+
+
+# R Code Chunks
+
+
+# Pandoc Citations
+
+
+
 
 
 ## References

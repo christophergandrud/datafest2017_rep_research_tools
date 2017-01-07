@@ -29,23 +29,3 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
     + LaTeX (if you want to output to PDFs)
 
 - Working internet connection
-
-## Motivation
-
-- What is reproducible research?
-
-- What are literate programming? How does it enhance reproducible research?
-
-## A reproducible workflow in R
-
-![reproducible-workflow](presentation/img/rep_workflow.png)
-
-## File organisation
-
-## Creating a new R Markdown File
-
-- YAML
-
-## Markdown Syntax
-
-## RMarkdown Syntax

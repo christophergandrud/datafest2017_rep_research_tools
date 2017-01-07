@@ -1,4 +1,6 @@
-/* latin-ext */
+/* latin-ext
+Modified from: https://github.com/rstudio/ShinyDeveloperConference/blob/master/Debugging/shiny-slides.css
+*/
 @font-face {
   font-family: 'Source Code Pro';
   font-style: normal;
@@ -104,8 +106,8 @@ body {
     background: #d16103;
 }
 
-h1 {
-  background-color: rgba(47,79,79, 0.2);
+h2 {
+  text-decoration: overline;
 }
 
 b, strong {
