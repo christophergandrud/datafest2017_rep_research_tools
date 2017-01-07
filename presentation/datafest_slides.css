@@ -121,3 +121,7 @@ q, blockquote {
     color: white;
     font-size: larger;
 }
+
+pre {
+  background-color: lightgray;
+}

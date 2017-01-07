@@ -35,3 +35,8 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 ## Dynamic Reproducible Research Workflow
 
 ![dynamic-work-flow](presentation/img/linked_workflow/rep_workflow.png)
+
+
+---
+
+[<img src="presentation/img/iqss_logo_flat.png" align="left" height="75" width ="75"/>]()

@@ -6,6 +6,7 @@ output:
     ioslides_presentation:
         css: datafest_slides.css
         logo: img/iqss_logo_flat.png
+        highlight: kate
 bibliography: datafest_rep.bib
 ---
 
@@ -98,7 +99,9 @@ Quantitative data science is the **creation of a computer programme** to gather,
 > - **Human-readable explanation**: a markup language like Markdown 
 (alternatives: $\LaTeX$, HTML, etc.)
 
-> - "**Tangled**" together with R Markdown
+> - "**Knit**" together with R Markdown.
+
+> + R Markdown allows us to use one markup language--Markdown--to output to different presentation document types (e.g. PDF, HTML, MS Word).
 
 ## Why reproducible research? {.build}
 
@@ -169,7 +172,7 @@ The original finding could just have been noise or caused by some data processin
 
 ## Following along
 
-In this workshop we will **create a fake research project** using the literate programming tool R Markdown.
+In this workshop we will **create a simple fake research project** using the literate programming tool R Markdown.
 
 <br>
 
@@ -207,7 +210,7 @@ In RStudio: `File` > `New File` > `R Markdown...`
 Save your file as **main.Rmd** in a new folder called **datafest_reproduce**.
 
 
-# YAML and Markdown Syntax
+# YAML Syntax
 
 ## The header
 
@@ -298,9 +301,299 @@ output:
 To set the actual caption label, use the `fig.cap='SOME CAPTION'` **code chunk
 option**.
 
+# Markdown Syntax
+
+## Markdown
+
+Below the header in *main.Rmd* you should see text that looks like this:
+
+```
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting 
+syntax for authoring HTML, PDF, and MS Word documents. For more 
+details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated 
+that includes both content as well as the output of any embedded 
+R code chunks within the document. You can embed an R code chunk 
+like this:
+```
+
+## Markdown
+
+Originally created by John Gruber to be an easy way to:
+
+- write HTML files
+
+- that are **human-readable as text files**.
+
+## Markdown: HTML less painful {.build}
+
+**HTML**:
+
+```
+<h1>A header</h1>
+
+<p>This is some text with a 
+<a href="http://www.example.com">link</a></p>
+
+<p>Here is some <strong>bold</strong> text.</p>
+```
+
+**Markdown**:
+
+```
+# A header
+
+This is some text with a [link](http://www.example.com).
+
+Here is some **bold** text.
+```
+
+## R Markdown
+
+<br>
+<br>
+<br>
+
+R Markdown allows us to not only make writing HTML easier but also $\LaTeX$.
+
+## Markdown syntax: Headers
+
+```
+# Header 1
+
+## Header 2
+
+### Header 3
+```
+
+And so on.
+
+## Markdown syntax
+
+Horizontal lines:
+
+```
+---
+```
+
+Bold text:
+
+```
+**bold**
+```
+
+Italics:
+
+```
+*italics*
+```
+
+## Markdown syntax
+
+Links:
+
+```
+[link](http://www.example.com)
+```
+
+Images:
+
+```
+![text description](FILE/PATH.png)
+```
+
+## Markdown syntax
+
+Unordered Lists:
+
+```
+- An item
+
+- An item
+
+- An item
+```
+
+Ordered Lists:
+
+```
+1. Item one
+
+2. Item two
+
+3. Item three
+```
+
+## Tables {.build}
+
+```
+| Name   | Something |
+| ------ | --------- |
+| Stuff  | Things    |
+| Things | Stuff     |
+```
+
+<br>
+
+| Name   | Something |
+| ------ | --------- |
+| Stuff  | Things    |
+| Things | Stuff     |
+
+## Math {.build}
+
+R Markdown from RStudio supports [MathJax](http://www.mathjax.org/). So, you can
+write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with
+R Markdown.
+
+```
+Inline equations have one dollar sign $s^2 =
+\frac{\sum(x - \bar{x})^2}{n - 1}$.
+```
+
+**Inline equations** have one dollar sign $s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$.
+
+**Display equations** have two dollar signs:
+
+```
+$$s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$$
+```
+
+$$s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$$
+
+## Expansion
+
+You can include **any** HTML syntax in a Markdown document. You can also change the formatting by adding a **custom CSS** file (just like a website).
+
+However, this will **only render in HTML output.**
+
+If you are using $\LaTeX$ (other than math syntax), you can also include $\LaTeX$ syntax in your RMarkdown document for rendering as a PDF.
+
+## Do . . .
+
+Delete all of the content of *main.Rmd* and use at least **three** pieces of Markdown syntax.
+
+<br>
+
+When you're finished "knit" the file and see the results by clicking on <img src="img/knit_button.png" height="35" width="100">.
 
 # R Code Chunks
 
+## Code chunks Inline {.build}
+
+To use syntax highlighting on code chunks inline with the text, surround your text
+with ``
+
+Knitable inline chunks with a back-tick then `r`.
+
+For example:
+
+```{r, eval=FALSE}
+Two plus two equals `r 2 + 2`.
+```
+
+Produces:
+
+Two plus two equals `r 2 + 2`.
+
+Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `Bash`, and `ruby`.
+
+## Do . . . 
+
+<br>
+<br>
+<br>
+
+Add this knitable code to *main.Rmd*:
+
+```{r, eval=FALSE}
+Two plus two equals `r 2 + 2`.
+```
+
+## Code chunks in Display
+
+Use three back-ticks (```) to **start** and **end** a code chunk that is **not run**.
+
+To create a **knit-able** code chunk begin the chunk with ````{r}`. Close the chunk with another three ticks.
+
+## Do . . .
+
+<br>
+<br>
+
+Add this code to *main.Rmd* in a knitable display code chunk
+
+```
+plot(1:10, rnorm(n = 10))
+```
+## Automatic table generation (basics) {.build}
+
+You can turn any matrix or data frame into a well formatted table with the knitr function `kable`.
+
+```{r, eval=FALSE}
+knitr::kable(mtcars)
+```
+
+## Do . . .
+
+<br>
+<br>
+
+Place the following code in a display chunk in your *main.Rmd* file:
+
+```{r, eval=FALSE}
+knitr::kable(mtcars)
+```
+
+## Chunk options
+
+Change how R Markdown chunks behave with **options**. Place
+options in the chunk head: ````{r echo=FALSE, error=FALSE}`
+
+| Option          | What it Does                                               |
+| --------------- | ---------------------------------------------------------- |
+| `echo=FALSE`    | Does not print the code only the output                    |
+| `error=FALSE`   | Does not print errors                                      |
+| `include=FALSE` | Does not include the code or output, but does run the code |
+| `fig.width`     | Sets figure width                                          |
+| `cache=TRUE`    | Cache the chunk. It is only run when the contents change.  |
+
+Many others at <http://yihui.name/knitr/options>
+
+## Do . . .
+
+<br>
+<br>
+
+Set the table code chunk in *main.Rmd* to `echo=FALSE`.
+
+## Sourcing an external script
+
+In reality it can be unwieldy to include all of your research code in a single R Markdown document. 
+
+An alternative is to `source` and script located elsewhere.
+
+For example, this chunk sources an R source code file stored on the internet. It scapes a table from the BBC and includes creates a table with the results.
+
+```{r, eval=FALSE}
+source()
+```
+
+## Do . . .
+
+<br>
+<br>
+
+Place the following code in *main.Rmd*:
+
+```{r, eval=FALSE}
+source()
+```
+
+Note: you will need to have the `rvest` and `dplyr` packages installed to run this script.
 
 # Pandoc Citations
 
