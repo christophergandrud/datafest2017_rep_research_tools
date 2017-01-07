@@ -24,8 +24,14 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 
     + R and RStudio
 
+    + `rmarkdown` package for R
+
     + GitHub Desktop/GitHub account
 
     + LaTeX (if you want to output to PDFs)
 
 - Working internet connection
+
+## Dynamic Reproducible Research Workflow
+
+![dynamic-work-flow](presentation/img/linked_workflow/rep_workflow.png)

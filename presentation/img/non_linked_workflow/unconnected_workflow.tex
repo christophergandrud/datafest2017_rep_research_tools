@@ -12,6 +12,8 @@
 \definecolor{LiteBlue}{HTML}{A8DDB5}
 \definecolor{DarkBlue}{HTML}{08589E}
 
+\definecolor{Orange}{HTML}{d16103}
+
 \definecolor{GrayLine}{HTML}{BDBDBD}
 
 % Set node styles
@@ -48,29 +50,15 @@
 \begin{tikzpicture}
 
     % Raw Data Nodes
-    \node (Data1) at (-3, 7) [RawData]{Raw Data};
+    \node (Data1) at (-3, 7) [Stage, text width= 4em]{Analysis};
     \node (Data2) at (-3, 5) [RawData]{Raw Data};
-    \node (Data3) at (-3, 3) [RawData]{Raw Data};
+    \node (Data3) at (-3, 3) [Stage]{LaTeX Book, \\ Article, \& \\ Slideshow \\ Presentations};
 
     % Workflow stage nodes
-    \node (DataGather) at (0.5, 5) [Stage, text width= 6em]{Data Gather};
-    \node (Analysis) at (5.5, 5) [Stage, text width= 4em]{Analysis};
-    \node (Presentation1) at (9, 8) [Stage]{LaTeX Book, \\ Article, \& \\ Slideshow \\ Presentations};
-    \node (Presentation2) at (9, 2.5) [Stage]{Markdown/ \\ HTML Website \\ Presentations};
-
-    % Lines
-    \draw [->, very thick] (Data1) -- (DataGather);
-    \draw [->, very thick] (Data2) -- (DataGather);
-    \draw [->, very thick] (Data3) -- (DataGather);
-    \draw [<->, very thick] (DataGather) -- (Analysis);
-    \draw [<->, very thick] (Analysis) -- (Presentation1);
-    \draw [<->, very thick] (Analysis) -- (Presentation2);
-
-    \draw [<->, very thick] (Presentation1) -- (Presentation2);
-
-    \path [sepline] (-3.5, 0.75) -- (11, 0.75);
-    \path [sepline] (11.5, 9) -- (11.5, 1.5);
-
+    \node (DataGather) at (0.5, 5) [Stage]{Markdown/ \\ HTML Website \\ Presentations};
+    \node (Analysis) at (5.5, 5) [RawData]{Raw Data};
+    \node (Presentation1) at (9, 8) [RawData]{Raw Data};
+    \node (Presentation2) at (9, 2.5) [Stage, text width= 6em]{Data Gather};
 
 \end{tikzpicture}
 
