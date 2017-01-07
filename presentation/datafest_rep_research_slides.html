@@ -510,7 +510,7 @@ Here is some **bold** text.</pre>
 
 3. Item three</pre>
 
-</article></slide><slide class=''><hgroup><h2>Tables</h2></hgroup><article  id="tables">
+</article></slide><slide class=''><hgroup><h2>Tables</h2></hgroup><article  id="tables" class="build">
 
 <pre >| Name   | Something |
 | ------ | --------- |
@@ -605,31 +605,19 @@ Here is some **bold** text.</pre>
 
 <pre >plot(1:10, rnorm(n = 10))</pre>
 
-</article></slide><slide class=''><hgroup><h2>Automatic table generation (basics)</h2></hgroup><article  id="automatic-table-generation-basics">
+</article></slide><slide class=''><hgroup><h2>Automatic table generation (basics)</h2></hgroup><article  id="automatic-table-generation-basics" class="build">
 
 <p>You can turn any matrix or data frame into a well formatted table with the knitr function <code>kable</code>.</p>
 
 <pre class = 'prettyprint lang-r'>knitr::kable(mtcars)</pre>
 
-<p>Make sure that the code chunk option <code>results=&#39;asis&#39;</code>.</p>
+</article></slide><slide class=''><hgroup><h2>Do . . .</h2></hgroup><article  id="do-.-.-.-3">
 
-</article></slide><slide class=''><hgroup><h2>Output Web</h2></hgroup><article  id="output-web">
+<p><br> <br></p>
 
-<p><img src="img/simpleRMarkdownOut.png" height=500 width=400/></p>
+<p>Place the following code in a display chunk in your <em>main.Rmd</em> file:</p>
 
-</article></slide><slide class=''><hgroup><h2>Output PDF or Word</h2></hgroup><article  id="output-pdf-or-word">
-
-<p>This R Markdown file can be compiled to PDF (via \(\LaTeX\)) or MS Word with RStudio.</p>
-
-<img src='img/chooseOutput.png' title='fig:'/><p class='caption'>choose output</p>
-
-</article></slide><slide class=''><hgroup><h2>Output PDF</h2></hgroup><article  id="output-pdf">
-
-<p><img src="img/simpleMarkdownPDF.png" height=500 width=425/></p>
-
-</article></slide><slide class=''><hgroup><h2>Output Word</h2></hgroup><article  id="output-word">
-
-<p><img src="img/simpleMarkdownWord.png" height=500 width=425/></p>
+<pre class = 'prettyprint lang-r'>knitr::kable(mtcars)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Chunk options</h2></hgroup><article  id="chunk-options">
 
@@ -664,9 +652,198 @@ Here is some **bold** text.</pre>
 
 <p>Many others at <a href='http://yihui.name/knitr/options' title=''>http://yihui.name/knitr/options</a></p>
 
+</article></slide><slide class=''><hgroup><h2>Do . . .</h2></hgroup><article  id="do-.-.-.-4">
+
+<p><br> <br></p>
+
+<p>Set the table code chunk in <em>main.Rmd</em> to <code>echo=FALSE</code>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Sourcing an external script</h2></hgroup><article  id="sourcing-an-external-script" class="build">
+
+<p>In reality it can be unwieldy to include all of your research code in a single R Markdown document.</p>
+
+<p>An alternative is to <code>source</code> and script located elsewhere.</p>
+
+<p>For example, this chunk sources an R source code file stored in the file <em>bbc_medals_scrape.R</em>. It scapes a table from the BBC and includes creates a table with the results.</p>
+
+<pre class = 'prettyprint lang-r'>source(&#39;bbc_medals_scrape.R&#39;)
+
+# Create table
+knitr::kable(medals, caption = &#39;2012 Medal Count&#39;)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Do . . .</h2></hgroup><article  id="do-.-.-.-5">
+
+<p><br> <br></p>
+
+<p>Download <em>bbc_medals_scrape.R</em> from: <a href='http://tinyurl.com/zqmr28w' title=''>http://tinyurl.com/zqmr28w</a>. Place it in the same folder as <em>main.Rmd</em>.</p>
+
+<p>Place the following code in <em>main.Rmd</em>:</p>
+
+<pre class = 'prettyprint lang-r'>source(&#39;bbc_medals_scrape.R&#39;)
+
+# Create table
+knitr::kable(medals, caption = &#39;2012 Medal Count&#39;)</pre>
+
+<p>Include the <code>message=FALSE</code> and <code>echo=FALSE</code> code chunck options.</p>
+
+<p>Note: you will need to have the <code>rvest</code> and <code>dplyr</code> packages installed to run this script.</p>
+
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Pandoc Citations</h2></hgroup><article  id="pandoc-citations">
 
-</article></slide><slide class=''><hgroup><h2>Resources</h2></hgroup><article  id="resources" class="build">
+</article></slide><slide class=''><hgroup><h2>BibTeX citations</h2></hgroup><article  id="bibtex-citations">
+
+<p>BibTex allows you to create a <strong>database</strong> of <strong>all</strong> of the <strong>literature/packages you cite</strong>.</p>
+
+<p>You can then insert them into your text and they will:</p>
+
+<ul>
+<li><p>Be <strong>automatically formatted</strong> consistently.</p></li>
+<li><p>Generate an appropriately ordered, consistently formatted <strong>reference list</strong> at the end of your document <strong>with only the works you actually cited</strong>.</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>The BibTeX Database</h2></hgroup><article  id="the-bibtex-database">
+
+<p>A BibTeX database is just a text file with the extension <code>.bib</code>.</p>
+
+<p>Each entry follows a standard format depending on the type of media.</p>
+
+<pre >@DOCUMENT_TYPE{CITE_KEY,
+    title = {TITLE},
+    author = {AUTHOR},
+    . . . = {. . .},
+}</pre>
+
+<p><strong>Note</strong>: Commas are very important!</p>
+
+</article></slide><slide class=''><hgroup><h2>The Cite Key</h2></hgroup><article  id="the-cite-key">
+
+<p><br> <br> <br></p>
+
+<p>The cite key <strong>links</strong> a specific citation in your presentation document to a specific BibTeX database entry.</p>
+
+<p>They must be <strong>unique</strong>.</p>
+
+<p>It <strong>does not matter</strong> what order your BibTeX entries are in the <code>.bib</code> file.</p>
+
+</article></slide><slide class=''><hgroup><h2>BibTeX Articles</h2></hgroup><article  id="bibtex-articles">
+
+<pre >@article{Donoho2010,
+  author = {Donoho, David L},
+  title = {An invitation to reproducible computational research},
+  journal = {Biostatistics},
+  year = {2010},
+  volume = {11},
+  number = {3},
+  pages = {385--388}
+}</pre>
+
+</article></slide><slide class=''><hgroup><h2>BibTeX Books</h2></hgroup><article  id="bibtex-books">
+
+<pre >@book{Cox1997,
+    title={Making Votes Count: Strategic Coordination in the World&#39;s
+            Electoral Systems},
+    author={Gary W. Cox},
+    year={1997},
+    volume = {7},
+    publisher={Cambridge University Press},
+    address = {Cambridge}
+}</pre>
+
+</article></slide><slide class=''><hgroup><h2>More</h2></hgroup><article  id="more">
+
+<p><br> <br></p>
+
+<p>For more media types and entry fields see <a href='http://en.wikipedia.org/wiki/BibTeX' title=''>http://en.wikipedia.org/wiki/BibTeX</a>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Tip: Google Scholar</h2></hgroup><article  id="tip-google-scholar">
+
+<p>Google scholar generates BibTeX entries.</p>
+
+<p>On an entry click <code>Cite &gt; BibTeX</code>.</p>
+
+<p>For a YouTube how-to see <a href='https://www.youtube.com/watch?v=SsJSR2b4_qc' title=''>https://www.youtube.com/watch?v=SsJSR2b4_qc</a>.</p>
+
+<p>Sometimes they need to be <strong>cleaned</strong> a little.</p>
+
+</article></slide><slide class=''><hgroup><h2>Linking your .bib file.</h2></hgroup><article  id="linking-your-.bib-file.">
+
+<p>To link your <code>.bib</code> file to your RMarkdown document add to the header:</p>
+
+<pre >bibliography:
+    - BIB_FILE_NAME.bib
+    - ANOTHER_BIB_FILE_NAME.bib</pre>
+
+<p><strong>Note</strong>: The files should be in the <strong>same directory</strong> as your R Markdown file.</p>
+
+</article></slide><slide class=''><hgroup><h2>Including BibTeX citations in RMarkdown</h2></hgroup><article  id="including-bibtex-citations-in-rmarkdown">
+
+<p>R Markdown uses <a href='http://johnmacfarlane.net/pandoc/README.html' title=''>Pandoc syntax</a> to include a citation in-text.</p>
+
+<p>General format: <code>@CITE_KEY</code>.</p>
+
+<p>So if the cite key is <code>Box1973</code> then <code>@Box1973</code> will return <span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>)</span> in the text of the presentation document.</p>
+
+</article></slide><slide class=''><hgroup><h2>Formatting In-Text Citations</h2></hgroup><article  id="formatting-in-text-citations">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Markup</th>
+<th align="left">Result</th>
+</tr>
+<tr class="odd">
+<td align="left"><code>[@Box1973]</code></td>
+<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>[see @Box1973]</code></td>
+<td align="left"><span class="cite">(see <span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>[see @Box1973, 33-40]</code></td>
+<td align="left"><span class="cite">(see <span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>[@Box1973; @Acemoglu2000]</code></td>
+<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="Acemoglu2000">
+<strong>???</strong></span>)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@Box1973 [33-40]</code></td>
+<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
+<strong>???</strong></span>)</span></td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>Reference List</h2></hgroup><article  id="reference-list">
+
+<p>A reference list with the full bibliographic details of all cited documents will be <strong>automatically created</strong> at the end of your document.</p>
+
+<p>Tip: Put <code># References</code> at the very end of your R Markdown document to have a section heading before the reference list.</p>
+
+</article></slide><slide class=''><hgroup><h2>Do . . .</h2></hgroup><article  id="do-.-.-.-6">
+
+<p>Create a file called <em>references.bib</em> in the same folder as <em>main.Rmd</em>.</p>
+
+<p>Include the following citation:</p>
+
+<pre >@article{Donoho2010,
+  author = {Donoho, David L},
+  title = {An invitation to reproducible computational research},
+  journal = {Biostatistics},
+  year = {2010},
+  volume = {11},
+  number = {3},
+  pages = {385--388}
+}</pre>
+
+<p>Link this to <em>main.Rmd</em> in the header and add a citation for <code>@Donoho2010</code> in the text.</p>
+
+</article></slide><slide class=''><hgroup><h2>Futher resources</h2></hgroup><article  id="futher-resources" class="build">
 
 <p>We only covered basic tools. Much more information is available at: <a href='http://rmarkdown.rstudio.com/' title=''>http://rmarkdown.rstudio.com/</a> and (shameless plug):</p>
 

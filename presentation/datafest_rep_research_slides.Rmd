@@ -570,16 +570,19 @@ Many others at <http://yihui.name/knitr/options>
 
 Set the table code chunk in *main.Rmd* to `echo=FALSE`.
 
-## Sourcing an external script
+## Sourcing an external script {.build}
 
 In reality it can be unwieldy to include all of your research code in a single R Markdown document. 
 
 An alternative is to `source` and script located elsewhere.
 
-For example, this chunk sources an R source code file stored on the internet. It scapes a table from the BBC and includes creates a table with the results.
+For example, this chunk sources an R source code file stored in the file *bbc_medals_scrape.R*. It scapes a table from the BBC and includes creates a table with the results.
 
 ```{r, eval=FALSE}
-source()
+source('bbc_medals_scrape.R')
+
+# Create table
+knitr::kable(medals, caption = '2012 Medal Count')
 ```
 
 ## Do . . .
@@ -587,21 +590,172 @@ source()
 <br>
 <br>
 
+Download *bbc_medals_scrape.R* from: <http://tinyurl.com/zqmr28w>. Place it in the same folder as *main.Rmd*.
+
 Place the following code in *main.Rmd*:
 
 ```{r, eval=FALSE}
-source()
+source('bbc_medals_scrape.R')
+
+# Create table
+knitr::kable(medals, caption = '2012 Medal Count')
 ```
+
+Include the `message=FALSE` and `echo=FALSE` code chunck options.
 
 Note: you will need to have the `rvest` and `dplyr` packages installed to run this script.
 
 # Pandoc Citations
 
+## BibTeX citations
+
+BibTex allows you to create a **database** of **all** of the **literature/packages
+you cite**.
+
+You can then insert them into your text and they will:
+
+- Be **automatically formatted** consistently.
+
+- Generate an appropriately ordered, consistently formatted **reference list** at
+the end of your document **with only the works you actually cited**.
+
+## The BibTeX Database
+
+A BibTeX database is just a text file with the extension `.bib`.
+
+Each entry follows a standard format depending on the type of media.
+
+```
+@DOCUMENT_TYPE{CITE_KEY,
+    title = {TITLE},
+    author = {AUTHOR},
+    . . . = {. . .},
+}
+```
+
+**Note**: Commas are very important!
+
+## The Cite Key
+
+<br>
+<br>
+<br>
+
+The cite key **links** a specific citation in your presentation document to a specific
+BibTeX database entry.
+
+They must be **unique**.
+
+It **does not matter** what order your BibTeX entries are in the `.bib` file.
+
+## BibTeX Articles
+
+```
+@article{Donoho2010,
+  author = {Donoho, David L},
+  title = {An invitation to reproducible computational research},
+  journal = {Biostatistics},
+  year = {2010},
+  volume = {11},
+  number = {3},
+  pages = {385--388}
+}
+```
+
+## BibTeX Books
+
+```
+@book{Cox1997,
+    title={Making Votes Count: Strategic Coordination in the World's
+            Electoral Systems},
+    author={Gary W. Cox},
+    year={1997},
+    volume = {7},
+    publisher={Cambridge University Press},
+    address = {Cambridge}
+}
+```
+
+## More
+
+<br>
+<br>
+
+For more media types and entry fields see
+[http://en.wikipedia.org/wiki/BibTeX](http://en.wikipedia.org/wiki/BibTeX).
+
+## Tip: Google Scholar
+
+Google scholar generates BibTeX entries.
+
+On an entry click `Cite > BibTeX`.
+
+For a YouTube how-to see [https://www.youtube.com/watch?v=SsJSR2b4_qc](https://www.youtube.com/watch?v=SsJSR2b4_qc).
+
+Sometimes they need to be **cleaned** a little.
+
+## Linking your .bib file.
+
+To link your `.bib` file to your RMarkdown document add to the header:
+
+```
+bibliography:
+    - BIB_FILE_NAME.bib
+    - ANOTHER_BIB_FILE_NAME.bib
+```
+
+**Note**: The files should be in the **same directory** as your R Markdown file.
+
+## Including BibTeX citations in RMarkdown
+
+R Markdown uses [Pandoc syntax](http://johnmacfarlane.net/pandoc/README.html)
+to include a citation in-text.
+
+General format: `@CITE_KEY`.
+
+So if the cite key is `Box1973` then `@Box1973` will return  @Box1973 in the text
+of the presentation document.
+
+## Formatting In-Text Citations
+
+| Markup                      | Result                    |
+| --------------------------- | ------------------------- |
+| `[@Box1973]`                | [@Box1973]                |
+| `[see @Box1973]`            | [see @Box1973]            |
+| `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]     |
+| `[@Box1973; @Acemoglu2000]` | [@Box1973; @Acemoglu2000] |
+| `@Box1973 [33-40]`          | @Box1973 [33-40]          |
+
+## Reference List
+
+A reference list with the full bibliographic details of all cited documents
+will be **automatically created** at the end of your document.
+
+Tip: Put `# References` at the very end of your R Markdown document to
+have a section heading before the reference list.
+
+## Do . . .
+
+Create a file called *references.bib* in the same folder as *main.Rmd*. 
+
+Include the following citation:
+
+```
+@article{Donoho2010,
+  author = {Donoho, David L},
+  title = {An invitation to reproducible computational research},
+  journal = {Biostatistics},
+  year = {2010},
+  volume = {11},
+  number = {3},
+  pages = {385--388}
+}
+```
+
+Link this to *main.Rmd* in the header and add a citation for `@Donoho2010` in the text.
 
 
-
-
-## Resources {.build}
+## Futher resources {.build}
 
 We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug): 
 

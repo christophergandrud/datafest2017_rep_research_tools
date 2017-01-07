@@ -3,11 +3,12 @@ title: "Example Project"
 author: "YOUR NAME"
 date: "07/01/2017"
 output: pdf_document
+bibliography: references.bib
 ---
 
-## A header
+# A header
 
-Lorem ipsum dolor sit amet, **consectetur adipiscing elit**. Sed molestie elementum massa, vitae scelerisque neque tristique vel. Maecenas quam tellus, placerat ac urna eget, imperdiet condimentum urna:
+Lorem ipsum dolor sit amet, **consectetur adipiscing elit**. Sed molestie elementum massa, vitae scelerisque neque tristique vel. Maecenas quam tellus, placerat ac urna eget, imperdiet condimentum urna [@Donoho2010] :
 
 $$
 s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}
@@ -22,3 +23,12 @@ plot(1:10, rnorm(n = 10))
 ```{r echo=FALSE}
 knitr::kable(mtcars)
 ```
+
+```{r message=FALSE, echo=FALSE}
+source('bbc_medals_scrape.R')
+
+# Create table
+knitr::kable(medals, caption = '2012 Medal Count')
+```
+
+## References

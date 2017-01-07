@@ -27,6 +27,3 @@ names(medals) <- c('country', 'gold', 'silver', 'bronze', 'total')
 
 # Sort by total medals in descending order
 medals <- arrange(medals, desc(total))
-
-# Return a Markdown formatted table with the results
-kable(medals)
