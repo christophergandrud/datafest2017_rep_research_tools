@@ -16,6 +16,8 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 
 - [ ] Understand key code chunk option syntax
 
+- [ ] Pandoc citations
+
 ## What you need
 
 - Installed:
@@ -36,7 +38,7 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 
 ## A reproducible workflow in R
 
-![reproducible-workflow(img/rep_workflow.png)
+![reproducible-workflow(presentation/img/rep_workflow.png)
 
 ## File organisation
 

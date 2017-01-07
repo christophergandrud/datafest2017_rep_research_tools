@@ -6,6 +6,7 @@ output:
     ioslides_presentation:
         css: datafest_slides.css
         logo: img/iqss_logo_flat.png
+bibliography: datafest_rep.bib
 ---
 
 ## Is this research?
@@ -20,6 +21,11 @@ output:
 
 > Papers, articles, slideshows, talks, books are **advertising, not research**.
 
+## What are journal articles/books/etc?
+
+> **Presentation documents**: announce select findings and try to convince an 
+audience that they are correct @Mesirov2010.
+
 
 ## Skills checklist
 
@@ -33,7 +39,12 @@ output:
 
 - Understand key **code chunk option** syntax
 
+- **Pandoc** citations
+
 
 ## Quants and computer programming
 
 > The practice of quantitative science is computer programming.
+
+
+## References

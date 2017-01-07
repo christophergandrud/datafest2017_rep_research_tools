@@ -104,14 +104,18 @@ body {
     background: #d16103;
 }
 
+h1 {
+  background-color: rgba(47,79,79, 0.2);
+}
+
 b, strong {
     font-weight: 900;
 }
 
 q, blockquote {
     quotes: none;
-    padding: 20% 0% 5% 5%;
-    background-color: darkslategray;
+    padding: 20% 5% 5% 10%;
+    background-color: rgb(47,79,79);
     color: white;
     font-size: larger;
 }
