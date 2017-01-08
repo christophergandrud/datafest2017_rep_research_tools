@@ -2,6 +2,8 @@
 
 *Christopher Gandrud*
 
+17 January 2016 (14:15-15:45)
+
 This session presents a reproducible research framework centered around R Markdown and RStudio. You can view the slide deck at: <http://tinyurl.com/hslac87>.
 
 ## Prerequisites
