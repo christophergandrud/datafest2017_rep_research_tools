@@ -16,8 +16,6 @@
 
     + `rmarkdown` package for R
 
-    + GitHub Desktop/GitHub account
-
     + LaTeX (if you want to output to PDFs)
 
 - Working internet connection
