@@ -8,7 +8,19 @@ This session presents a reproducible research framework centered around R Markdo
 
 ## Prerequisites
 
-The session assumes a basic familiarity with R (e.g. can install packages, source files, and so on).
+- Prior knowledge: basic familiarity with R (e.g. can install packages, source files, and so on).
+
+- Have a laptop with the following software installed:
+
+    + R and RStudio
+
+    + `rmarkdown` package for R
+
+    + GitHub Desktop/GitHub account
+
+    + LaTeX (if you want to output to PDFs)
+
+- Working internet connection
 
 ## Checklist of skills you will learn
 
@@ -21,20 +33,6 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 - [ ] Understand key code chunk option syntax
 
 - [ ] Pandoc citations
-
-## What you need
-
-- Installed:
-
-    + R and RStudio
-
-    + `rmarkdown` package for R
-
-    + GitHub Desktop/GitHub account
-
-    + LaTeX (if you want to output to PDFs)
-
-- Working internet connection
 
 ## Dynamic Reproducible Research Workflow
 
