@@ -1,4 +1,4 @@
-# Harvard DataFest 2017--Tools for Reproducible Data Science
+# Harvard DataFest 2017 | Tools for Reproducible Data Science
 
 Christopher Gandrud
 
