@@ -1,6 +1,6 @@
 # Harvard DataFest 2017 | Tools for Reproducible Data Science
 
-Christopher Gandrud
+*Christopher Gandrud*
 
 Presents a reproducible research framework centered around RStudio/R Markdown. You can view the slide deck at: <http://tinyurl.com/hslac87>.
 
