@@ -2,7 +2,9 @@
 
 Christopher Gandrud
 
-Presents a reproducible research framework centered around RStudio/R Markdown.
+Presents a reproducible research framework centered around RStudio/R Markdown. You can view the slide deck at: <http://tinyurl.com/hslac87>.
+
+## Prerequisites
 
 The session assumes a basic familiarity with R (e.g. can install packages, source files, and so on).
 
