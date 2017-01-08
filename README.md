@@ -36,6 +36,10 @@ The session assumes a basic familiarity with R (e.g. can install packages, sourc
 
 ![dynamic-work-flow](presentation/img/linked_workflow/rep_workflow.png)
 
+## Repository organisation
+
+The repository contains the full souce code for the *presentation* and an example project that is built in the workshop.
+
 
 ---
 

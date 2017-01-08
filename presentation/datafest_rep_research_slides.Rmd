@@ -1,5 +1,5 @@
 ---
-title: "DataFest 2017—Reproducible Research Tools"
+title: "DataFest 2017 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
 date: "17 January 2017"
 output: 
@@ -9,6 +9,14 @@ output:
         highlight: kate
 bibliography: datafest_rep.bib
 ---
+
+## Following along
+
+<br>
+<br>
+<br>
+
+This slide deck is available at: <http://tinyurl.com/hslac87>.
 
 ## Is this research?
 
@@ -251,7 +259,7 @@ YAML is a **human read-able data format**.
 
 ```{YAML}
 ---
-title: "DataFest 2017—Reproducible Research Tools"
+title: "DataFest 2017 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
 date: "17 January 2017"
 output: 
