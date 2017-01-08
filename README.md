@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-- Prior knowledge: basic familiarity with R (e.g. can install packages, source files, and so on).
+- Basic familiarity with R (e.g. can install packages, source files, and so on).
 
 - Have a laptop with the following software installed:
 
