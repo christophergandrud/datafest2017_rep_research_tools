@@ -947,4 +947,6 @@ We only covered basic tools. Much more information is available at: <http://rmar
 
 ![](img/rep_book_cover.jpg)
 
+[CONVERT OWN WORK TO RMARKDOWN]
+
 ## References
