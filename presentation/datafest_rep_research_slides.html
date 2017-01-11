@@ -366,7 +366,7 @@ output: pdf_document
 title: &quot;DataFest 2017 | Reproducible Research Tools&quot;
 author: &quot;Christopher Gandrud -- IQSS&quot;
 date: &quot;17 January 2017&quot;
-output: 
+output:
     ioslides_presentation:
         css: datafest_slides.css
         logo: img/iqss_logo_flat.png
@@ -511,13 +511,13 @@ output: rticles::elsevier_article</pre>
 
 <pre >## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting 
-syntax for authoring HTML, PDF, and MS Word documents. For more 
+This is an R Markdown document. Markdown is a simple formatting
+syntax for authoring HTML, PDF, and MS Word documents. For more
 details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
 
-When you click the **Knit** button a document will be generated 
-that includes both content as well as the output of any embedded 
-R code chunks within the document. You can embed an R code chunk 
+When you click the **Knit** button a document will be generated
+that includes both content as well as the output of any embedded
+R code chunks within the document. You can embed an R code chunk
 like this:</pre>
 
 </article></slide><slide class=''><hgroup><h2>Markdown</h2></hgroup><article  id="markdown-1">
@@ -535,7 +535,7 @@ like this:</pre>
 
 <pre >&lt;h1&gt;A header&lt;/h1&gt;
 
-&lt;p&gt;This is some text with a 
+&lt;p&gt;This is some text with a
 &lt;a href=&quot;http://www.example.com&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Here is some &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;</pre>
@@ -803,7 +803,7 @@ m1 &lt;- lm(prestige ~ education, data = Prestige)
 m2 &lt;- lm(prestige ~ education + type, data = Prestige)
 
 # Create formatted table
-stargazer &lt;- stargazer(m1, m2, 
+stargazer &lt;- stargazer(m1, m2,
                        title = &#39;Parameter Estimates&#39;,
                        type = &#39;latex&#39;, header = FALSE)</pre>
 
@@ -887,7 +887,7 @@ stargazer &lt;- stargazer(m1, m2,
 
 </article></slide><slide class=''><hgroup><h2>BibTeX Articles</h2></hgroup><article  id="bibtex-articles">
 
-<pre >@article{Donoho2010,
+<pre >@article{donoho2010,
   author = {Donoho, David L},
   title = {An invitation to reproducible computational research},
   journal = {Biostatistics},
@@ -899,7 +899,7 @@ stargazer &lt;- stargazer(m1, m2,
 
 </article></slide><slide class=''><hgroup><h2>BibTeX Books</h2></hgroup><article  id="bibtex-books">
 
-<pre >@book{Cox1997,
+<pre >@book{cox1997,
     title={Making Votes Count: Strategic Coordination in the World&#39;s
             Electoral Systems},
     author={Gary W. Cox},
@@ -941,8 +941,7 @@ stargazer &lt;- stargazer(m1, m2,
 
 <p>General format: <code>@CITE_KEY</code>.</p>
 
-<p>So if the cite key is <code>Box1973</code> then <code>@Box1973</code> will return <span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>)</span> in the text of the presentation document.</p>
+<p>So if the cite key is <code>box1973</code> then <code>@box1973</code> will return <span class="cite">Box and Tiao (1973)</span> in the text of the presentation document.</p>
 
 </article></slide><slide class=''><hgroup><h2>Formatting In-Text Citations</h2></hgroup><article  id="formatting-in-text-citations">
 
@@ -952,30 +951,24 @@ stargazer &lt;- stargazer(m1, m2,
 <th align="left">Result</th>
 </tr>
 <tr class="odd">
-<td align="left"><code>[@Box1973]</code></td>
-<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>)</span></td>
+<td align="left"><code>[@box1973]</code></td>
+<td align="left"><span class="cite">(Box and Tiao 1973)</span></td>
 </tr>
 <tr class="even">
-<td align="left"><code>[see @Box1973]</code></td>
-<td align="left"><span class="cite">(see <span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>)</span></td>
+<td align="left"><code>[see @box1973]</code></td>
+<td align="left"><span class="cite">(see Box and Tiao 1973)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><code>[see @Box1973, 33-40]</code></td>
-<td align="left"><span class="cite">(see <span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>)</span></td>
+<td align="left"><code>[see @box1973, 33-40]</code></td>
+<td align="left"><span class="cite">(see Box and Tiao 1973, 33–40)</span></td>
 </tr>
 <tr class="even">
-<td align="left"><code>[@Box1973; @Acemoglu2000]</code></td>
-<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="Acemoglu2000">
-<strong>???</strong></span>)</span></td>
+<td align="left"><code>[@box1973; @acemoglu2000]</code></td>
+<td align="left"><span class="cite">(Box and Tiao 1973; Acemoglu and Robinson 2000)</span></td>
 </tr>
 <tr class="odd">
-<td align="left"><code>@Box1973 [33-40]</code></td>
-<td align="left"><span class="cite">(<span class="citeproc-not-found" data-reference-id="Box1973">
-<strong>???</strong></span>)</span></td>
+<td align="left"><code>@box1973 [33-40]</code></td>
+<td align="left"><span class="cite">Box and Tiao (1973, 33–40)</span></td>
 </tr>
 </table>
 
@@ -991,7 +984,7 @@ stargazer &lt;- stargazer(m1, m2,
 
 <p>Include the following citation:</p>
 
-<pre >@article{Donoho2010,
+<pre >@article{donoho2010,
   author = {Donoho, David L},
   title = {An invitation to reproducible computational research},
   journal = {Biostatistics},
@@ -1001,7 +994,7 @@ stargazer &lt;- stargazer(m1, m2,
   pages = {385--388}
 }</pre>
 
-<p>Link this to <em>main.Rmd</em> in the header and add a citation for <code>@Donoho2010</code> in the text.</p>
+<p>Link this to <em>main.Rmd</em> in the header and add a citation for <code>@donoho2010</code> in the text.</p>
 
 </article></slide><slide class=''><hgroup><h2>Futher resources</h2></hgroup><article  id="futher-resources" class="build">
 
@@ -1012,16 +1005,22 @@ stargazer &lt;- stargazer(m1, m2,
 </article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references" class="unnumbered">
 
 <div id="refs" class="references">
-<div id="ref-Donoho2010">
+<div id="ref-acemoglu2000">
+<p>Acemoglu, Daron, and James A. Robinson. 2000. “Why Did the West Extend the Franchise? Democracy, Inequality, and Growth in Historical Perspective.” <em>The Quarterly Journal of Economics</em> 115 (4): 1167–99.</p></div>
+
+<div id="ref-box1973">
+<p>Box, G. E. P., and G. C. Tiao. 1973. <em>Bayesian Inference in Statistical Analysis</em>. New York: Wiley Classics.</p></div>
+
+<div id="ref-donoho2010">
 <p>Donoho, David L. 2010. “An invitation to reproducible computational research.” <em>Biostatistics</em> 11 (3): 385–88.</p></div>
 
-<div id="ref-Knuth1992">
+<div id="ref-knuth1992">
 <p>Knuth, Donald E. 1992. <em>Literate Programming</em>. CSLI Lecture Notes. Stanford, CA: Center for the Study of Language; Information.</p></div>
 
-<div id="ref-Mesirov2010">
+<div id="ref-mesirov2010">
 <p>Mesirov, Jill P. 2010. “Accessible reproducible research.” <em>Science</em> 327 (5964): 415–16.</p></div>
 
-<div id="ref-Peng2014">
+<div id="ref-peng2014">
 <p>Peng, Roger D. 2014. “The Real Reason Reproducible Research Is Important.” <em>Simply Statistics</em>.</p></div></div></article></slide>
 
 

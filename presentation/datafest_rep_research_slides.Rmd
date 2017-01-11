@@ -2,7 +2,7 @@
 title: "DataFest 2017 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
 date: "17 January 2017"
-output: 
+output:
     ioslides_presentation:
         css: datafest_slides.css
         logo: img/iqss_logo_flat.png
@@ -32,8 +32,8 @@ This slide deck is available at: <http://tinyurl.com/hslac87>.
 
 ## What are journal articles/books/etc?
 
-> **Presentation documents**: announce select findings and try to convince an 
-audience that they are correct [@Mesirov2010].
+> **Presentation documents**: announce select findings and try to convince an
+audience that they are correct [@mesirov2010].
 
 ## What is research?
 
@@ -42,7 +42,7 @@ Quantitative research involves the **procedures** and **choices** researchers ma
 <br>
 <br>
 
-This includes “the **full software environment**, code, and data that produced the results” [@Donoho2010, 3015].
+This includes “the **full software environment**, code, and data that produced the results” [@donoho2010, 3015].
 
 ## Quants and computer programming {.build}
 
@@ -50,11 +50,11 @@ This includes “the **full software environment**, code, and data that produced
 
 <br>
 
-So, we need **computer programming tools** (preview: literate programming). 
+So, we need **computer programming tools** (preview: literate programming).
 
 # Reproducible Comp. Research
 
-## Replicable 
+## Replicable
 
 <br>
 <br>
@@ -68,7 +68,7 @@ Sometimes full replications are not feasible because:
 
 - **limited resources** for gathering new data (e.g. very expensive to build
 another Large Hadron Collider),
- 
+
 - the original research already sampled the **universe of cases**.
 
 *So...*
@@ -95,13 +95,13 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 <br>
 
-**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @Knuth1992].
+**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
 
 ## Toolbox {.build}
 
 - **Machine-readable source code**: R (alternatives: Python, Julia, etc.)
 
-- **Human-readable explanation**: a markup language like Markdown 
+- **Human-readable explanation**: a markup language like Markdown
 (alternatives: $\LaTeX$, HTML, etc.)
 
 - "**Knit**" together with R Markdown.
@@ -114,7 +114,7 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 There are **costs** to using these tools. **Why** do it?
 
-> Reproducibility is a **minimum** standard for evaluating scientific claims. 
+> Reproducibility is a **minimum** standard for evaluating scientific claims.
 
 ## Mistakes
 
@@ -158,7 +158,7 @@ Really reproducible research is an important part of this process.
 
 ## Important Caveat!
 
-> “A study can be reproducible and still be wrong” [@Peng2014]. 
+> “A study can be reproducible and still be wrong” [@peng2014].
 <br>
 <br>
 The original finding could just have been noise or caused by some data processing error and so on.
@@ -190,7 +190,7 @@ A completed version of the project can be found at: <http://preview.tinyurl.com/
 - Installed:
 
     + R and RStudio
-    
+
     + `rmarkdown` package for R
 
     + $\LaTeX$ (if you want to output to PDFs)
@@ -230,7 +230,7 @@ output: pdf_document
 ---
 ```
 
-This is the R Markdown file's **header**. 
+This is the R Markdown file's **header**.
 
 ## The header
 
@@ -259,7 +259,7 @@ YAML is a **human read-able data format**.
 title: "DataFest 2017 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
 date: "17 January 2017"
-output: 
+output:
     ioslides_presentation:
         css: datafest_slides.css
         logo: img/iqss_logo_flat.png
@@ -344,7 +344,7 @@ option**.
 
 ## LaTeX options note
 
-One important exception to the hierarchical options rule are a number of $\LaTeX$ specific formatting options including `lang`, `fontsize`, and `documentclass`. 
+One important exception to the hierarchical options rule are a number of $\LaTeX$ specific formatting options including `lang`, `fontsize`, and `documentclass`.
 
 These are specified in **top-level YAML**, e.g.:
 
@@ -360,7 +360,7 @@ fontsize: 12pt
 <br>
 <br>
 
-Include a few custom document options in your *main.Rmd* header. 
+Include a few custom document options in your *main.Rmd* header.
 
 ## Templates
 
@@ -429,13 +429,13 @@ Below the header in *main.Rmd* you should see text that looks like this:
 ```
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting 
-syntax for authoring HTML, PDF, and MS Word documents. For more 
+This is an R Markdown document. Markdown is a simple formatting
+syntax for authoring HTML, PDF, and MS Word documents. For more
 details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated 
-that includes both content as well as the output of any embedded 
-R code chunks within the document. You can embed an R code chunk 
+When you click the **Knit** button a document will be generated
+that includes both content as well as the output of any embedded
+R code chunks within the document. You can embed an R code chunk
 like this:
 ```
 
@@ -454,7 +454,7 @@ Originally created by John Gruber to be an easy way to:
 ```
 <h1>A header</h1>
 
-<p>This is some text with a 
+<p>This is some text with a
 <a href="http://www.example.com">link</a></p>
 
 <p>Here is some <strong>bold</strong> text.</p>
@@ -620,7 +620,7 @@ Two plus two equals `r 2 + 2`.
 
 Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
 
-## Do . . . 
+## Do . . .
 
 <br>
 <br>
@@ -686,7 +686,7 @@ Many others at <http://yihui.name/knitr/options>
 
 ## Global chunk options
 
-You can set the the options for all code chunks in a document with `knitr::opts_chunk$set`. 
+You can set the the options for all code chunks in a document with `knitr::opts_chunk$set`.
 
 For example, include a code chunk at the beginning of your document with:
 
@@ -703,7 +703,7 @@ Set the code chunks in *main.Rmd* so that only plots/tables are returned to the 
 
 ## Sourcing an external script {.build}
 
-In reality it can be unwieldy to include all of your research code in a single R Markdown document. 
+In reality it can be unwieldy to include all of your research code in a single R Markdown document.
 
 An alternative is to `source` and script located elsewhere.
 
@@ -745,7 +745,7 @@ m1 <- lm(prestige ~ education, data = Prestige)
 m2 <- lm(prestige ~ education + type, data = Prestige)
 
 # Create formatted table
-stargazer <- stargazer(m1, m2, 
+stargazer <- stargazer(m1, m2,
                        title = 'Parameter Estimates',
                        type = 'latex', header = FALSE)
 ```
@@ -762,7 +762,7 @@ stargazer <- stargazer(m1, m2,
 <br>
 <br>
 
-Include a regression table with `stargazer` in *main.Rmd*. 
+Include a regression table with `stargazer` in *main.Rmd*.
 
 # Pandoc Footnotes
 
@@ -837,7 +837,7 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
 ## BibTeX Articles
 
 ```
-@article{Donoho2010,
+@article{donoho2010,
   author = {Donoho, David L},
   title = {An invitation to reproducible computational research},
   journal = {Biostatistics},
@@ -851,7 +851,7 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
 ## BibTeX Books
 
 ```
-@book{Cox1997,
+@book{cox1997,
     title={Making Votes Count: Strategic Coordination in the World's
             Electoral Systems},
     author={Gary W. Cox},
@@ -899,18 +899,18 @@ to include a citation in-text.
 
 General format: `@CITE_KEY`.
 
-So if the cite key is `Box1973` then `@Box1973` will return  @Box1973 in the text
+So if the cite key is `box1973` then `@box1973` will return  @box1973 in the text
 of the presentation document.
 
 ## Formatting In-Text Citations
 
 | Markup                      | Result                    |
 | --------------------------- | ------------------------- |
-| `[@Box1973]`                | [@Box1973]                |
-| `[see @Box1973]`            | [see @Box1973]            |
-| `[see @Box1973, 33-40]`     | [see @Box1973, 33-40]     |
-| `[@Box1973; @Acemoglu2000]` | [@Box1973; @Acemoglu2000] |
-| `@Box1973 [33-40]`          | @Box1973 [33-40]          |
+| `[@box1973]`                | [@box1973]                |
+| `[see @box1973]`            | [see @box1973]            |
+| `[see @box1973, 33-40]`     | [see @box1973, 33-40]     |
+| `[@box1973; @acemoglu2000]` | [@box1973; @acemoglu2000] |
+| `@box1973 [33-40]`          | @box1973 [33-40]          |
 
 ## Reference List
 
@@ -922,12 +922,12 @@ have a section heading before the reference list.
 
 ## Do . . .
 
-Create a file called *references.bib* in the same folder as *main.Rmd*. 
+Create a file called *references.bib* in the same folder as *main.Rmd*.
 
 Include the following citation:
 
 ```
-@article{Donoho2010,
+@article{donoho2010,
   author = {Donoho, David L},
   title = {An invitation to reproducible computational research},
   journal = {Biostatistics},
@@ -938,12 +938,12 @@ Include the following citation:
 }
 ```
 
-Link this to *main.Rmd* in the header and add a citation for `@Donoho2010` in the text.
+Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in the text.
 
 
 ## Futher resources {.build}
 
-We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug): 
+We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug):
 
 ![](img/rep_book_cover.jpg)
 
