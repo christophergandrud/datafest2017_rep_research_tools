@@ -30,7 +30,7 @@
 
 - [ ] Understand key code chunk option syntax
 
-- [ ] Pandoc citations
+- [ ] Pandoc footnotes and citations
 
 ## Dynamic Reproducible Research Workflow
 

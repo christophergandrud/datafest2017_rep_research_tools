@@ -97,19 +97,18 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 **Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @Knuth1992].
 
-## Set of tools
-
-<br>
-<br>
+## Toolbox {.build}
 
 - **Machine-readable source code**: R (alternatives: Python, Julia, etc.)
 
-> - **Human-readable explanation**: a markup language like Markdown 
+- **Human-readable explanation**: a markup language like Markdown 
 (alternatives: $\LaTeX$, HTML, etc.)
 
-> - "**Knit**" together with R Markdown.
+- "**Knit**" together with R Markdown.
 
-> + R Markdown allows us to use one markup language--Markdown--to output to different presentation document types (e.g. PDF, HTML, MS Word).
+    + R Markdown allows us to use one markup language--Markdown--to output to different presentation document types (e.g. PDF, HTML, MS Word).
+
+    + Conversion from R Markdown to these formats is done via [Pandoc](http://pandoc.org/)
 
 ## Why reproducible research? {.build}
 
@@ -176,11 +175,11 @@ The original finding could just have been noise or caused by some data processin
 
 > - **R code chunks** into R Markdown documents that gathers data and outputs results
 
-> - **Pandoc** citations
+> - **Pandoc** footnotes and citations
 
 ## Following along
 
-In this workshop we will **create a simple fake research project** using the literate programming tool R Markdown.
+In this workshop we will **create a simple fake research project/article** using the literate programming tool R Markdown.
 
 <br>
 
@@ -222,7 +221,7 @@ Save your file as **main.Rmd** in a new folder called **datafest_reproduce**.
 
 Your file should start with something like:
 
-```{YAML}
+```
 ---
 title: "Example Project"
 author: "YOUR NAME"
@@ -255,7 +254,7 @@ YAML is a **human read-able data format**.
 
 ## This presentation's header
 
-```{YAML}
+```
 ---
 title: "DataFest 2017 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
@@ -276,11 +275,35 @@ bibliography: datafest_rep.bib
 
 YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
+## Output types
+
+The `output` element allows you to specify a wide variety of different output formats, including PDF, HTML, and MS Word. E.g.:
+
+**PDF** (via $\LaTeX$)
+
+```
+output: pdf_document
+```
+
+**HTML**
+
+```
+output: html_document
+```
+
+**MS Word**
+
+```
+output: word_document
+```
+
+**Do. . .**: Compile your document to different formats.
+
 ## Table of Contents & Numbered Sections
 
 You can add a table of contents and numbered sections to your PDF output:
 
-```{YAML}
+```
 output:
   pdf_document:
     toc: true
@@ -288,13 +311,25 @@ output:
     fig_captions: true
 ```
 
-To do the same for **HTML** also include the information under `html_document`.
+## Different options for different output
+
+To do the same for **HTML**, for example, also include the information under `html_document`.
+
+Different formatting options are possible for differet output types:
+
+```
+output:
+  pdf_document:
+    toc: true
+  html_document:
+    toc: false
+```
 
 ## Figure Options
 
-Create consistent figure formatting:
+Create consistent figure formatting, e.g.:
 
-```{YAML}
+```
 output:
   pdf_document:
     fig_width: 7
@@ -306,6 +341,84 @@ output:
 
 To set the actual caption label, use the `fig.cap='SOME CAPTION'` **code chunk
 option**.
+
+## LaTeX options note
+
+One important exception to the hierarchical options rule are a number of $\LaTeX$ specific formatting options including `lang`, `fontsize`, and `documentclass`. 
+
+These are specified in **top-level YAML**, e.g.:
+
+```
+title: "Example Project"
+output: pdf_document
+fontsize: 12pt
+```
+
+## Do . . . .
+
+<br>
+<br>
+<br>
+
+Include a few custom document options in your *main.Rmd* header. 
+
+## Templates
+
+Templates allow you to choose custom formatting.
+
+For example, the [rticles](https://github.com/rstudio/rticles) has templates for a number of different journal styles including:
+
+- JSS
+
+- AMS
+
+- AEA
+
+- Elsevier journals
+
+## Using rticles templates
+
+1. Install `rticles`.
+
+2. `File` > `New File` > `R Markdown...` ? `From Template`
+
+![](img/rticles_start.png)
+
+## Using rticles templates
+
+Then, update YAML information. For example, with the Elsevier template:
+
+```
+title: Short Paper
+author:
+  - name: Alice Anonymous
+    email: alice@example.com
+    affiliation: Some Institute of Technology
+    footnote: Corresponding Author
+  - name: Bob Security
+    email: bob@example.com
+    affiliation: Another University
+address:
+  - code: Some Institute of Technology
+    address: Department, Street, City, State, Zip
+  - code: Another University
+    address: Department, Street, City, State, Zip
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+bibliography: mybibfile.bib
+output: rticles::elsevier_article
+```
+
+## Do . . .
+
+<br>
+<br>
+<br>
+
+Feel free to **replace** *main.Rmd* with an article template and use that for the remainder of the session.
 
 # Markdown Syntax
 
@@ -451,7 +564,7 @@ Ordered Lists:
 
 ## Math {.build}
 
-R Markdown from RStudio supports [MathJax](http://www.mathjax.org/). So, you can
+R Markdown from RStudio supports [MathJax](http://www.mathjax.org/) (and $\LaTeX$). So, you can
 write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with
 R Markdown.
 
@@ -505,7 +618,7 @@ Produces:
 
 Two plus two equals `r 2 + 2`.
 
-Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `Bash`, and `ruby`.
+Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
 
 ## Do . . . 
 
@@ -518,6 +631,8 @@ Add this knitable code to *main.Rmd*:
 ```{r, eval=FALSE}
 Two plus two equals `r 2 + 2`.
 ```
+
+If you want, use a non-R engine to conduct some operation and return the results inline.
 
 ## Code chunks in Display
 
@@ -569,12 +684,22 @@ options in the chunk head: ````{r echo=FALSE, error=FALSE}`
 
 Many others at <http://yihui.name/knitr/options>
 
+## Global chunk options
+
+You can set the the options for all code chunks in a document with `knitr::opts_chunk$set`. 
+
+For example, include a code chunk at the beginning of your document with:
+
+```{r eval=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ## Do . . .
 
 <br>
 <br>
 
-Set the table code chunk in *main.Rmd* to `echo=FALSE`.
+Set the code chunks in *main.Rmd* so that only plots/tables are returned to the presentation document.
 
 ## Sourcing an external script {.build}
 
@@ -593,9 +718,6 @@ knitr::kable(medals, caption = '2012 Medal Count')
 
 ## Do . . .
 
-<br>
-<br>
-
 Download *bbc_medals_scrape.R* from: <http://tinyurl.com/zqmr28w>. Place it in the same folder as *main.Rmd*.
 
 Place the following code in *main.Rmd*:
@@ -607,9 +729,67 @@ source('bbc_medals_scrape.R')
 knitr::kable(medals, caption = '2012 Medal Count')
 ```
 
-Include the `message=FALSE` and `echo=FALSE` code chunck options.
-
 Note: you will need to have the `rvest` and `dplyr` packages installed to run this script.
+
+## Regression estimates tabel
+
+The [stargazer](https://cran.r-project.org/web/packages/stargazer/index.html) package creates well formatted regression parameter estimate tables.
+
+For example:
+
+```{r eval=FALSE}
+library(car); library(stargazer)
+
+# Estimate normal linear model
+m1 <- lm(prestige ~ education, data = Prestige)
+m2 <- lm(prestige ~ education + type, data = Prestige)
+
+# Create formatted table
+stargazer <- stargazer(m1, m2, 
+                       title = 'Parameter Estimates',
+                       type = 'latex', header = FALSE)
+```
+
+**Note:** Include `results='asis'` in the code chunk header.
+
+## Result:
+
+![](img/regression_table_stargaze.png)
+
+## Do . . .
+
+<br>
+<br>
+<br>
+
+Include a regression table with `stargazer` in *main.Rmd*. 
+
+# Pandoc Footnotes
+
+## Pandoc footnotes
+
+R Markdown can use Pandoc footnotes.
+
+**In-text**: In the text place a **unique** footnote key in the format:
+
+- `[^KEY]`
+
+**At the end** of your document put the full footnote starting with the key,
+e.g.
+
+- `[^KEY]: This is a footnote.`
+
+## BibTeX citations
+
+BibTex allows you to create a **database** of **all** of the **literature/packages
+you cite**.
+
+You can then insert them into your text and they will:
+
+- Be **automatically formatted** consistently.
+
+- Generate an appropriately ordered, consistently formatted **reference list** at
+the end of your document **with only the works you actually cited**.
 
 # Pandoc Citations
 
