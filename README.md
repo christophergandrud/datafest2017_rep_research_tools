@@ -12,11 +12,11 @@
 
 - Have a laptop with the following software installed:
 
-    + R and RStudio
+    + [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-    + `rmarkdown` package for R
+    + `rmarkdown` package for R (will will install other packages during the session as well)
 
-    + LaTeX (if you want to output to PDFs)
+    + LaTeX (if you want to output to PDFs): [Mac](https://tug.org/mactex/), [Windows](https://miktex.org/)
 
 - Working internet connection
 
