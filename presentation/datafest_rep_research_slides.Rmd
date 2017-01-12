@@ -781,19 +781,6 @@ e.g.
 
 ## BibTeX citations
 
-BibTex allows you to create a **database** of **all** of the **literature/packages
-you cite**.
-
-You can then insert them into your text and they will:
-
-- Be **automatically formatted** consistently.
-
-- Generate an appropriately ordered, consistently formatted **reference list** at
-the end of your document **with only the works you actually cited**.
-
-# Pandoc Citations
-
-## BibTeX citations
 
 BibTex allows you to create a **database** of **all** of the **literature/packages
 you cite**.
@@ -940,13 +927,18 @@ Include the following citation:
 
 Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in the text.
 
-
 ## Futher resources {.build}
 
 We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug):
 
 ![](img/rep_book_cover.jpg)
 
-[CONVERT OWN WORK TO RMARKDOWN]
+## Your own work
+
+<br>
+<br>
+<br>
+
+If we have time . . . begin converting some of your own work to R Markdown.
 
 ## References
