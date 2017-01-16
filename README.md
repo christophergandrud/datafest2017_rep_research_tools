@@ -14,7 +14,7 @@
 
     + [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-    + `rmarkdown` package for R (will will install other packages during the session as well)
+    + `rmarkdown` and `dplyr` packages for R (we will install other packages during the session as well)
 
     + LaTeX (if you want to output to PDFs): [Mac](https://tug.org/mactex/), [Windows](https://miktex.org/)
 
