@@ -42,7 +42,7 @@ Quantitative research involves the **procedures** and **choices** researchers ma
 <br>
 <br>
 
-This includes “the **full software environment**, code, and data that produced the results” [@donoho2010, 3015].
+This includes “the **full software environment**, **code**, and **data** that produced the results” [@donoho2010, 3015].
 
 ## Quants and computer programming {.build}
 
@@ -97,7 +97,7 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 **Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
 
-## Toolbox {.build}
+## Toolbox
 
 - **Machine-readable source code**: R (alternatives: Python, Julia, etc.)
 
@@ -225,7 +225,7 @@ Your file should start with something like:
 ---
 title: "Example Project"
 author: "YOUR NAME"
-date: "07/01/2017"
+date: "17/01/2017"
 output: pdf_document
 ---
 ```
@@ -476,7 +476,7 @@ Here is some **bold** text.
 <br>
 <br>
 
-R Markdown allows us to not only make writing HTML easier but also $\LaTeX$.
+R Markdown allows us to not only make writing HTML easier but also $\LaTeX$ and MS Word via Pandoc.
 
 ## Markdown syntax: Headers
 
@@ -716,11 +716,13 @@ source('bbc_medals_scrape.R')
 knitr::kable(medals, caption = '2012 Medal Count')
 ```
 
+You can also cache the output using the `cache=TRUE` option (useful for time consuming computations).
+
 ## Do . . .
 
 Download *bbc_medals_scrape.R* from: <http://tinyurl.com/zqmr28w>. Place it in the same folder as *main.Rmd*.
 
-Place the following code in *main.Rmd*:
+Place the following code in a new code chunk in *main.Rmd*:
 
 ```{r, eval=FALSE}
 source('bbc_medals_scrape.R')
@@ -779,6 +781,8 @@ e.g.
 
 - `[^KEY]: This is a footnote.`
 
+# Pandoc Citations
+
 ## BibTeX citations
 
 BibTex allows you to create a **database** of **all** of the **literature/packages
@@ -790,8 +794,6 @@ You can then insert them into your text and they will:
 
 - Generate an appropriately ordered, consistently formatted **reference list** at
 the end of your document **with only the works you actually cited**.
-
-# Pandoc Citations
 
 ## BibTeX citations
 
@@ -946,5 +948,13 @@ Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in th
 We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug):
 
 ![](img/rep_book_cover.jpg)
+
+## If there is time. . .
+
+<br>
+<br>
+<br>
+
+Begin converting a piece of your research to R Markdown.
 
 ## References
