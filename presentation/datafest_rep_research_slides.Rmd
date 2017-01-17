@@ -18,6 +18,8 @@ bibliography: datafest_rep.bib
 
 This slide deck is available at: <http://tinyurl.com/j4f3mny>.
 
+Source code for the slide deck and examples files is at: <http://tinyurl.com/gvbehak>.
+
 ## Is this research?
 
 ![](img/journal_ss.png)
