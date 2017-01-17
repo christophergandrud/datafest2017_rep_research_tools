@@ -20,6 +20,17 @@ This slide deck is available at: <http://tinyurl.com/j4f3mny>.
 
 Source code for the slide deck and examples files is at: <http://tinyurl.com/gvbehak>.
 
+## Broad Plan
+
+<br>
+<br>
+
+- Key **concepts**/**motivation**
+
+- R Markdown **hands-on**.
+
+    + Hopefully it will be **easy**.
+
 ## Is this research?
 
 ![](img/journal_ss.png)
@@ -46,7 +57,7 @@ Quantitative research involves the **procedures** and **choices** researchers ma
 
 This includes “the **full software environment**, **code**, and **data** that produced the results” [@donoho2010, 3015].
 
-## Quants and computer programming {.build}
+## Quants and computer programming
 
 > The practice of quantitative science **is computer programming**.
 
