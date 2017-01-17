@@ -631,8 +631,6 @@ Produces:
 
 Two plus two equals `r 2 + 2`.
 
-Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
-
 ## Do . . .
 
 <br>
@@ -652,6 +650,9 @@ If you want, use a non-R engine to conduct some operation and return the results
 Use three back-ticks (```) to **start** and **end** a code chunk that is **not run**.
 
 To create a **knit-able** code chunk begin the chunk with ````{r}`. Close the chunk with another three ticks.
+
+Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
+
 
 ## Do . . .
 
@@ -697,6 +698,17 @@ options in the chunk head: ````{r echo=FALSE, error=FALSE}`
 
 Many others at <http://yihui.name/knitr/options>
 
+## Computationally intensive work
+
+Avoid running code time-intensive code everytime a presentation document is compiled. 
+Different strategies:
+
+- `cache=TRUE` code chunk option.
+
+- [Makefiles](http://mrbook.org/blog/tutorials/make/)
+
+Paradigm for both is to *run code only when it changes*.
+
 ## Global chunk options
 
 You can set the the options for all code chunks in a document with `knitr::opts_chunk$set`.
@@ -728,8 +740,6 @@ source('bbc_medals_scrape.R')
 # Create table
 knitr::kable(medals, caption = '2012 Medal Count')
 ```
-
-You can also cache the output using the `cache=TRUE` option (useful for time consuming computations).
 
 ## Do . . .
 

@@ -692,8 +692,6 @@ Here is some **bold** text.</pre>
 
 <p>Two plus two equals 4.</p>
 
-<p>Note: <code>r</code> is just one of the &quot;engines&quot; you can use with RMarkdown. Others include <code>python</code>, <code>bash</code>, and <code>scala</code>.</p>
-
 </article></slide><slide class=''><hgroup><h2> Do . . .</h2></hgroup><article  id="do-.-.-.-2">
 
 <p><br> <br> <br></p>
@@ -709,6 +707,8 @@ Here is some **bold** text.</pre>
 <p>Use three back-ticks (```) to <strong>start</strong> and <strong>end</strong> a code chunk that is <strong>not run</strong>.</p>
 
 <p>To create a <strong>knit-able</strong> code chunk begin the chunk with ```<code>{r}</code>. Close the chunk with another three ticks.</p>
+
+<p>Note: <code>r</code> is just one of the &quot;engines&quot; you can use with RMarkdown. Others include <code>python</code>, <code>bash</code>, and <code>scala</code>.</p>
 
 </article></slide><slide class=''><hgroup><h2> Do . . .</h2></hgroup><article  id="do-.-.-.-3">
 
@@ -765,6 +765,17 @@ Here is some **bold** text.</pre>
 
 <p>Many others at <a href='http://yihui.name/knitr/options' title=''>http://yihui.name/knitr/options</a></p>
 
+</article></slide><slide class=''><hgroup><h2>Computationally intensive work</h2></hgroup><article  id="computationally-intensive-work">
+
+<p>Avoid running code time-intensive code everytime a presentation document is compiled. Different strategies:</p>
+
+<ul>
+<li><p><code>cache=TRUE</code> code chunk option.</p></li>
+<li><p><a href='http://mrbook.org/blog/tutorials/make/' title=''>Makefiles</a></p></li>
+</ul>
+
+<p>Paradigm for both is to <em>run code only when it changes</em>.</p>
+
 </article></slide><slide class=''><hgroup><h2>Global chunk options</h2></hgroup><article  id="global-chunk-options">
 
 <p>You can set the the options for all code chunks in a document with <code>knitr::opts_chunk$set</code>.</p>
@@ -791,8 +802,6 @@ Here is some **bold** text.</pre>
 
 # Create table
 knitr::kable(medals, caption = &#39;2012 Medal Count&#39;)</pre>
-
-<p>You can also cache the output using the <code>cache=TRUE</code> option (useful for time consuming computations).</p>
 
 </article></slide><slide class=''><hgroup><h2>Do . . .</h2></hgroup><article  id="do-.-.-.-6">
 
