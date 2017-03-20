@@ -20,7 +20,7 @@
 
 - Working internet connection
 
-## Checklist of skills you will learn
+## Checklist of skills you will learn
 
 - [ ] Basic Markdown syntax
 
