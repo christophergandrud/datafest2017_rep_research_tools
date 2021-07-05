@@ -31,7 +31,7 @@ Source code for the slide deck and examples files is at: <http://tinyurl.com/gvb
 
     + Hopefully it will be **easy**.
 
-## Is this research?
+## Is this research?
 
 ![](img/journal_ss.png)
 
@@ -123,13 +123,13 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
     + Conversion from R Markdown to these formats is done via [Pandoc](http://pandoc.org/)
 
-## Why reproducible research? {.build}
+## Why reproducible research? {.build}
 
 There are **costs** to using these tools. **Why** do it?
 
 > Reproducibility is a **minimum** standard for evaluating scientific claims.
 
-## Mistakes
+## Mistakes
 
 <br>
 <br>
@@ -178,7 +178,7 @@ The original finding could just have been noise or caused by some data processin
 
 # Plan for learning tools
 
-## Skills checklist
+## Skills checklist
 
 - Understand a reproducible research **workflow** with **literate programming**
 
@@ -198,7 +198,7 @@ In this workshop we will **create a simple fake research project/article** using
 
 A completed version of the project can be found at: <http://preview.tinyurl.com/hynlfxq>
 
-## What you need
+## What you need
 
 - Installed:
 
@@ -213,13 +213,13 @@ A completed version of the project can be found at: <http://preview.tinyurl.com/
 
 # Setup R Markdown File
 
-## Create a new R Markdown file {.build}
+## Create a new R Markdown file {.build}
 
 In RStudio: `File` > `New File` > `R Markdown...`
 
 ![](img/new_rmarkdown.png)
 
-## Save your file
+## Save your file
 
 <br>
 <br>
@@ -604,7 +604,7 @@ However, this will **only render in HTML output.**
 
 If you are using $\LaTeX$ (other than math syntax), you can also include $\LaTeX$ syntax in your RMarkdown document for rendering as a PDF.
 
-## Do . . .
+## Do . . .
 
 Delete all of the content of *main.Rmd* and use at least **three** pieces of Markdown syntax.
 
@@ -631,7 +631,7 @@ Produces:
 
 Two plus two equals `r 2 + 2`.
 
-## Do . . .
+## Do . . .
 
 <br>
 <br>
@@ -654,7 +654,7 @@ To create a **knit-able** code chunk begin the chunk with ````{r}`. Close the ch
 Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
 
 
-## Do . . .
+## Do . . .
 
 <br>
 <br>
