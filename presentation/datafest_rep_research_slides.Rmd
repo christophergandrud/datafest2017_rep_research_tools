@@ -957,7 +957,7 @@ Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in th
 
 We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug):
 
-![](img/rep_book_cover.jpg)
+![](img/rep_book_cover.png)
 
 
 ## If there is time. . .
