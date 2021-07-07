@@ -758,24 +758,30 @@ Note: you will need to have the `rvest` and `dplyr` packages installed to run th
 
 ## Regression estimates tabel
 
-The [stargazer](https://cran.r-project.org/web/packages/stargazer/index.html) package creates well formatted regression parameter estimate tables.
+The [modelsummary](https://github.com/vincentarelbundock/modelsummary) package creates well formatted regression parameter estimate tables.
 
 For example:
 
-```{r eval=FALSE}
-library(car); library(stargazer)
+```{r eval=TRUE, message=FALSE}
+xfun::pkg_attach2("car","modelsummary")
 
 # Estimate normal linear model
-m1 <- lm(prestige ~ education, data = Prestige)
-m2 <- lm(prestige ~ education + type, data = Prestige)
+models <- list(
+  lm(prestige ~ education, data = Prestige),
+  lm(prestige ~ education + type, data = Prestige)
+)
 
 # Create formatted table
-stargazer <- stargazer(m1, m2,
+model_table <- modelsummary(models,
                        title = 'Parameter Estimates',
                        type = 'latex', header = FALSE)
 ```
 
-**Note:** Include `results='asis'` in the code chunk header.
+## Table output
+
+```{r}
+model_table
+```
 
 ## Result:
 
